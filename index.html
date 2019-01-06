@@ -88,74 +88,15 @@
       
         <h1 id="Python-dictionary"><a href="#Python-dictionary" class="headerlink" title="Python dictionary"></a>Python dictionary</h1><p>This file is aimed to record the basic operation of dictionary (Python).</p>
 <h3 id="Create"><a href="#Create" class="headerlink" title="* Create"></a>* Create</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">thisdict =	&#123;</span><br><span class="line">  <span class="string">"University"</span>: <span class="string">"UCI"</span>,</span><br><span class="line">  <span class="string">"Department"</span>: <span class="string">"ICS"</span>,</span><br><span class="line">  <span class="string">"Graduate date"</span>: <span class="number">2020</span>   &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Add-new-item"><a href="#Add-new-item" class="headerlink" title="* Add new item"></a>* Add new item</h3><p>update method: add dict2 to dict1</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel = &#123;<span class="string">'jack'</span>: <span class="number">4098</span>, <span class="string">'sape'</span>: <span class="number">4139</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel[<span class="string">'guido'</span>] = <span class="number">4127</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel</span><br><span class="line">&#123;<span class="string">'jack'</span>: <span class="number">4098</span>, <span class="string">'sape'</span>: <span class="number">4139</span>, <span class="string">'guido'</span>: <span class="number">4127</span>&#125;</span><br><span class="line">&gt;&gt;&gt;dict1.update(dict2)</span><br></pre></td></tr></table></figure>
-<h3 id="Access"><a href="#Access" class="headerlink" title="* Access"></a>* Access</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>tel[<span class="string">'jack'</span>]</span><br><span class="line"><span class="number">4098</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x = tel.get(<span class="string">'jack'</span>)</span><br><span class="line"><span class="number">4098</span></span><br></pre></td></tr></table></figure>
-<h3 id="Delete"><a href="#Delete" class="headerlink" title="* Delete"></a>* Delete</h3><p>use the key to delete<br>popitem() method removes the last inserted item<br>del can also delete the dictionary completely<br>The clear() keyword empties the dictionary:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">del</span> tel[<span class="string">'sape'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>thisdict.pop(<span class="string">"University"</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>thisdict.popitem()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>thisdict.clear()</span><br></pre></td></tr></table></figure>
-<h3 id="list-set-convert"><a href="#list-set-convert" class="headerlink" title="* list, set convert"></a>* list, set convert</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(tel)</span><br><span class="line">[<span class="string">'jack'</span>, <span class="string">'guido'</span>, <span class="string">'irv'</span>]</span><br></pre></td></tr></table></figure>
-<h3 id="in-not-in"><a href="#in-not-in" class="headerlink" title="* in, not in"></a>* in, not in</h3><p>use key to index</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'guido'</span> <span class="keyword">in</span> tel</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'jack'</span> <span class="keyword">not</span> <span class="keyword">in</span> tel</span><br><span class="line"><span class="keyword">False</span></span><br></pre></td></tr></table></figure>
-<h3 id="for-loop"><a href="#for-loop" class="headerlink" title="* for loop"></a>* for loop</h3><p>this x is the key not the value<br>thisdict[x] is the value<br>this y is the value not the key<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> thisdict:</span><br><span class="line"><span class="keyword">for</span> y <span class="keyword">in</span> thisdict.values():</span><br><span class="line"><span class="keyword">for</span> x, y <span class="keyword">in</span> thisdict.items():</span><br></pre></td></tr></table></figure></p>
-<h3 id="Other-Table"><a href="#Other-Table" class="headerlink" title="Other Table"></a>Other Table</h3><table>
-<thead>
-<tr>
-<th>Method</th>
-<th>Des</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>clear()</td>
-<td>Removes all the elements from the dictionary</td>
-</tr>
-<tr>
-<td>copy()</td>
-<td>Returns a copy of the dictionary</td>
-</tr>
-<tr>
-<td>fromkeys()</td>
-<td>Returns a dictionary with the specified keys and values</td>
-</tr>
-<tr>
-<td>get()</td>
-<td>Returns the value of the specified key</td>
-</tr>
-<tr>
-<td>items()</td>
-<td>Returns a list containing the a tuple for each key value pair</td>
-</tr>
-<tr>
-<td>keys()</td>
-<td>Returns a list containing the dictionary’s keys</td>
-</tr>
-<tr>
-<td>pop()</td>
-<td>Removes the element with the specified key</td>
-</tr>
-<tr>
-<td>popitem()</td>
-<td>Removes the last inserted key-value pair</td>
-</tr>
-<tr>
-<td>setdefault()</td>
-<td>Returns the value of the specified key. If the key does not exist: insert the key, with the specified value</td>
-</tr>
-<tr>
-<td>update()</td>
-<td>Updates the dictionary with the specified key-value pairs</td>
-</tr>
-<tr>
-<td>values()</td>
-<td>Returns a list of all the values in the dictionary</td>
-</tr>
-</tbody>
-</table>
-
+        
+          <p class="article-more-link">
+            <a href="/2019/01/05/Python-dictionary/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/DerrickWanglf/2019/01/05/Python-dictionary/" data-id="cjqkncodi0000u8wsiysjv86h" class="article-share-link">Share</a>
+      <a data-url="https://github.com/DerrickWanglf/2019/01/05/Python-dictionary/" data-id="cjqknkkk30000wewsstem926r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -193,7 +134,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/DerrickWanglf/2019/01/05/hello world/" data-id="cjqkncodo0002u8wsb2yyfm9w" class="article-share-link">Share</a>
+      <a data-url="https://github.com/DerrickWanglf/2019/01/05/hello world/" data-id="cjqknkkk90002wews0d9vmgkl" class="article-share-link">Share</a>
       
       
     </footer>
